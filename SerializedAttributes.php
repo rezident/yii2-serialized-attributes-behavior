@@ -1,6 +1,6 @@
 <?php
 
-namespace baibaratsky\yii\behaviors\model;
+namespace rezident\yii\behaviors\model;
 
 use yii\base\Behavior;
 use yii\db\BaseActiveRecord;

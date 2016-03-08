@@ -1,14 +1,18 @@
 {
-    "name": "baibaratsky/yii2-serialized-attributes-behavior",
+    "name": "rezident/yii2-serialized-attributes-behavior",
     "description": "Yii2 Serialized Attributes Behavior",
     "type": "yii2-extension",
     "keywords": ["yii", "yii2", "serialize", "serialized", "attribute",  "attributes", "behavior", "array"],
     "license": "BSD-3-Clause",
-    "homepage": "http://github.com/baibaratsky/yii2-serialized-attributes-behavior",
+    "homepage": "http://github.com/rezident/yii2-serialized-attributes-behavior",
     "authors": [
         {
             "name": "Andrei Baibaratsky",
             "email": "andrei@baibaratsky.com"
+        },
+        {
+            "name": "Yuri Nazarenko",
+            "email": "mail@rezident.org"
         }
     ],
     "require": {
@@ -16,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "baibaratsky\\yii\\behaviors\\model\\": ""
+            "rezident\\yii\\behaviors\\model\\": ""
         }
     }
 }
