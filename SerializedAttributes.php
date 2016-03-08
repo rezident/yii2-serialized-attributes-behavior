@@ -45,12 +45,15 @@ class SerializedAttributes extends Behavior
                 $this->owner->setOldAttribute($attribute, $this->oldAttributes[$attribute]);
             }
 
-            if (is_array($this->owner->$attribute) && count($this->owner->$attribute) > 0) {
+            $needSerialize = (is_array($this->owner->$attribute) && count($this->owner->$attribute) > 0)
+                || is_object($this->owner->$attribute);
+            if ($needSerialize) {
                 $this->owner->$attribute = serialize($this->owner->$attribute);
                 if ($this->encode) {
                     $this->owner->$attribute = base64_encode($this->owner->$attribute);
                 }
-            } elseif (empty($this->owner->$attribute)) {
+
+            } else if (empty($this->owner->$attribute)) {
                 $this->owner->$attribute = null;
             } else {
                 throw new SerializeAttributeException($this->owner, $attribute);
